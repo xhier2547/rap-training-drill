@@ -57,4 +57,4 @@
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-Built with 🎵 and 🎤 by **Central Wator**
+Built with 🎵 and 🎤 by **Central QIER**
