@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-dojo-bg: #080A0F;
+  --color-dojo-surface: #0F1117;
+  --color-dojo-border: rgba(255, 255, 255, 0.06);
+  --color-dojo-neon: #00FF85;
+  --color-dojo-cyber: #00C8FF;
+  --color-dojo-alert: #FF3D5A;
+  --color-dojo-link: #4D9FFF;
+  --color-dojo-text: #E0E0E0;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--color-dojo-bg);
+    color: var(--color-dojo-text);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dojo-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dojo-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Utilities for neon glow */
+@utility neon-glow-green {
+  box-shadow: 0 0 15px rgba(0, 255, 133, 0.3), inset 0 0 10px rgba(0, 255, 133, 0.1);
+}
+
+@utility neon-text-green {
+  text-shadow: 0 0 10px rgba(0, 255, 133, 0.6);
+}
+
+@utility neon-glow-cyber {
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.3), inset 0 0 10px rgba(0, 200, 255, 0.1);
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-dojo-cyber);
+  }
 }

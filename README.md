@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⛩️ Rap Dojo Pro: The Ultimate Flow Trainer
 
-## Getting Started
+![Rap Dojo Header](https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop)
 
-First, run the development server:
+**Rap Dojo Pro** is a high-performance web application designed for professional rap training and vocal mastery. Built with **Next.js 15**, **Web Audio API**, and **AI Speech Recognition**, it provides a "better than Smule" experience for artists focused on UK Drill, Grime, and complex flow patterns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔥 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **🎙️ Pro Studio FX Rack**: Real-time vocal processing chain including Dynamics Compression, EQ (Bass/Treble), and Algorithmic Studio Reverb.
+*   **📡 AI Flow Analysis**: Instant syllable-by-syllable accuracy scoring using the Web Speech API.
+*   **⚡ Kinetic Lyrics Engine**: Performance-timed, ultra-smooth lyric synchronization with support for complex slang and Thai language segmentation.
+*   **🌊 Dynamic Waveform Control**: Interactive audio scrubbing and "Snap-to-Lyric" loop selection for practicing difficult bars.
+*   **🏆 Mastery Reporting**: Detailed post-session analysis with XP progression, performance ranks, and session playback.
+*   **🧪 Auto-Sync Engine**: Proprietary vocal-peak detection that automatically aligns LRC lyrics to any audio file.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | [Next.js 15](https://nextjs.org/) (App Router), React 19 |
+| **Styling** | [Tailwind CSS 4.0](https://tailwindcss.com/), HSL Palettes |
+| **Animation** | [Framer Motion](https://www.framer.com/motion/) |
+| **Audio Engine** | Web Audio API (BiquadFilter, DelayNode, DynamicsCompressor) |
+| **AI/ML** | Web Speech API (Recognition & Synthesis) |
+| **State** | [Zustand](https://github.com/pmndrs/zustand) |
+| **Icons** | Lucide React |
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+*   Node.js 20.x or higher
+*   A modern browser (Chrome/Edge/Safari) with Microphone access
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/rap-dojo-pro.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
+*   `app/`: Next.js App Router for pages and layouts.
+*   `components/`: Modular UI components (Dashboard, Studio, Results).
+*   `lib/utils/vocalProcessor.ts`: Core logic for the **VocalProcessor** and Web Audio graph.
+*   `lib/store/`: Zustand state management for the Studio environment.
+*   `data/`: Song library, slang dictionary, and sync metadata.
 
-## Deploy on Vercel
+## 🛡️ License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with 🎵 and 🎤 by **Central Wator**
